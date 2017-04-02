@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<body>
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+</style>
+
+<form action="envia_user">
+<table id="t01"><caption>Registrar</caption>
+<tr> <td>nombre:</td>    <td><input type="text" name="Nombre"></td> </tr>
+<tr> <td>apellido:</td>  <td><input type="text" name="Apellido"></td> </tr>
+<tr> <td>dni:</td>       <td><input type="text" name="Dni"></td> </tr>
+<tr> <td>mial:</td>      <td><input type="text" name="Mail"></td> </tr>
+<tr> <td>telefono:</td>  <td><input type="text" name="Telefono"></td> </tr>
+<tr> <td>Ciudad:</td>    <td><input type="text" name="Ciudad"></td> </tr>
+<tr> <td>Provincia:</td> <td><input type="text" name="Provincia"></td> </tr>
+<tr> <td>Pais:</td>      <td><input list="Pais" name="Pais">
+                                <datalist id="Pais">
+                            <option value="Argentina">
+                            <option value="Uruguay">
+                            <option value="Estonia">
+                            <option value="Camerun">
+                            <option value="Holanda">
+                           </datalist></td> </tr>
+</table>
+</form>
+
+<button type="button" onclick="zoom()">Guardar!</button>
+<button type="button" onclick="nozoom()">No Guardar!</button>
+<script>
+function zoom() {
+    var x = document.getElementById("t01");
+    x.style.fontSize = "25px";           
+    x.style.color = "red"; 
+}
+</script>
+
+<script>
+function nozoom() {
+    var x = document.getElementById("t01");
+    x.style.fontSize = "16px";           
+    x.style.color = "black"; 
+}
+</script>
+
+
+</body>
+</head>
+</html>
